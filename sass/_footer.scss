@@ -1,0 +1,91 @@
+.footer {
+  width: 100%;
+  display: flex;
+  padding: 100px 0 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__categories {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+
+    .footer__column {
+      width: 310px;
+      & p {
+        font-size: 13px;
+        margin-bottom: 16px;
+        color: #777777;
+        line-height: 23px;
+        & i {
+          margin-right: 20px;
+          color: #9d60eb;
+          font-size: 18px;
+        }
+      }
+      & .footer__text--bold {
+        font-size: 15px;
+        font-weight: 600;
+        color: #101c21;
+        margin-bottom: 23px;
+      }
+      .footer__social {
+        & > i {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: #ccc;
+          text-align: center;
+          line-height: 50px;
+          font-size: 18px;
+          margin-right: 20px;
+        }
+        &--blue {
+          background: transparent
+            linear-gradient(45deg, #6362d7 0%, #ff8fe2 100%) 0% 0% no-repeat;
+          color: #fff;
+        }
+        &--green {
+          background: transparent
+            linear-gradient(
+              23deg,
+              #00b56c 0%,
+              #1dbe75 22%,
+              #68d58c 68%,
+              #9ee69d 100%
+            )
+            0% 0% no-repeat padding-box;
+          color: #fff;
+        }
+        &--pink {
+          color: #fff;
+
+          background: transparent
+            linear-gradient(90deg, #ff9ab6 0%, #f03295 99%, #f03295 100%) 0% 0%
+            no-repeat padding-box;
+        }
+        &--orange {
+          color: #fff;
+
+          background: transparent
+            linear-gradient(47deg, #f09376 0%, #f0db79 100%) 0% 0% no-repeat
+            padding-box;
+        }
+      }
+    }
+  }
+  &__banner {
+    clip-path: polygon(0 37%, 100% 0, 100% 100%, 0% 100%);
+    background: transparent linear-gradient(4deg, #ffffff 0%, #dff0ff 100%) 0%
+      0% no-repeat padding-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 283px;
+    & > img {
+      bottom: 0;
+      transform: translateY(14px);
+    }
+  }
+}

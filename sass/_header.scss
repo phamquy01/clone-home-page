@@ -1,8 +1,9 @@
+@import 'mixin';
 .header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin: 40px 215px;
+  margin: 40px 0;
   &__logo {
     height: 42px;
     cursor: pointer;
@@ -74,14 +75,8 @@
   &__contact {
     width: 130px;
     height: 42px;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    background: transparent linear-gradient(59deg, #6362d7 0%, #ff8fe2 100%) 0%
-      0% no-repeat padding-box;
-    color: #fff;
+    @include btnGradient();
     text-transform: capitalize;
-    font-size: 14px;
     cursor: pointer;
     margin-left: 35px;
   }

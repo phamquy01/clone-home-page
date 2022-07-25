@@ -1,5 +1,12 @@
-@import "mixin";
+@import 'mixin';
 .hero {
+  position: relative;
+  &__bgc-block {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+  }
   &__heading {
     display: flex;
     flex-direction: column;
@@ -7,45 +14,59 @@
     justify-content: center;
     width: 632px;
     margin: 0 auto;
-    &__line {
+    .hero__line {
       font-size: 46px;
       font-weight: 600;
       letter-spacing: 0.46px;
     }
-    &__subline {
+    .hero__subline {
       font-size: 46px;
       margin: 10px 0 20px;
       letter-spacing: 0.46px;
     }
-    &__text {
+    .hero__text {
       font-size: 14px;
       color: #555;
       line-height: 24px;
       text-align: center;
       margin: 0 50px 35px;
     }
-  }
-  &__btn {
-    &__gradient {
-      width: 140px;
-      height: 48px;
-      outline: none;
-      border: none;
-      border-radius: 4px;
-      color: #fff;
-      font-size: 15px;
-      background: transparent linear-gradient(57deg, #6362d7 0%, #ff8fe2 100%)
-        0% 0% no-repeat padding-box;
+    .hero__btn {
+      &--gradient {
+        width: 140px;
+        height: 48px;
+        @include btnGradient();
+        margin-right: 36px;
+      }
+      &--light {
+        width: 140px;
+        height: 48px;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        color: #9d60eb;
+        border: 1px solid #9d60eb;
+        cursor: pointer;
+        background: #fff;
+      }
     }
-    &__light {
-      width: 140px;
-      height: 48px;
-      outline: none;
-      border: 1px solid #9d60eb;
-      border-radius: 4px;
-      color: #9d60eb;
-      font-size: 15px;
-      background: #fff;
+  }
+  &__no-name {
+    &__img {
+      width: 100%;
+      height: 384px;
+      object-fit: contain;
+      margin: 20px 0;
+    }
+    &__bottom {
+      width: 100%;
+      height: 90px;
+      background: transparent linear-gradient(13deg, #ffffff 0%, #aad7ff 100%)
+        0% 0% no-repeat padding-box;
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
     }
   }
 }
